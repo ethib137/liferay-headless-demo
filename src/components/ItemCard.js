@@ -7,7 +7,7 @@ import { InstanceContext } from '../providers/InstanceProvider';
 function ItemCard({item, onClick}) {
 	const {baseUrl} = useContext(InstanceContext);
 
-	const image = item.content.contentFields.find(contentField => contentField.dataType === 'image');
+	const image = item.content.contentFields?.find(contentField => contentField.dataType === 'image');
 
 	return (
 		<ClayCard>
